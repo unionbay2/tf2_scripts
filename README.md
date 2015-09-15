@@ -1,50 +1,73 @@
 TF2 Scripts
 ====================
-### Important info
+## important info
 It is probably a good idea to turn on auto reload.
-the class cfg scripts are executed after binds.cfg.  So binds in the class cfg will take precedence over the ones in binds.cfg
+
+The class cfg scripts are executed after binds.cfg.  So binds in the class cfg will take precedence over the ones in binds.cfg
 
 I like hiding certain viewmodels while seeing other view models. Generally I like hiding hitscan viewmodels, but keeping projectile/melee weapon view models.
 
-I use shift to crouch, and - to open console. I hate opening console when trying to switch to slot1.
+---
+## autoexec.cfg
+Use this only if you have fast internet and very low ping (> 50ms).  This makes character models more closely align with hitboxes.
 
-### autoexec.cfg
-Just has some network configs... its generally good if you have low ping and fast internet. Don't use this file if you have high ping/slow internet, otherwise the game will by choppy.
+---
+## binds.cfg
+The bulk of my personal binds.  
 
-### binds.cfg
-The bulk of my personal binds.  I have zoom alias written, but it is not bound to anything. You may bind it if you are interested - it reduces the FOV to make it zoom in.  Stabbystabby uses it to aim with ambassador occasionally.  The idea of Pyro Switch is to switch to pyro with loadout #3. So if a spy saps a teleporter entrance as you spawn, you can switch to pyro with loadout #3, which you ideally have a homewrecker on.
+- `+zoom` alias is written but not bound. It decreases FOV to "zoom" in.  Stabbystabby uses this to aim with Ambassador occasionally.  You may bind this if you wish.
+- `+pyro` alias lets you switch to pyro with loadout3.  Ideally you have a homewrecker equipped on loadout3, so if you spawn and the teleporter is sapped, you can remove it as quickly as possible.
+- `q`, `e`, and `r` are mapped to voice commands so you can troll your team/enemies.
+- `t` is taunt, since I accidentally press `g` when trying to press `b` for `lastdisguise`.  `g` is bound to spray.
+- `SHIFT` is crouch, since I used to play on mac.
+- `-` toggles console since I accidentally press `~` when trying to press `1` for `slot1`.
+- `]` explodes.  Deny demo heads, and explode when you do high fives.
 
-q, e, and r are mapped to voice commands so you can troll your team/enemies.
+---
+## engineer.cfg
+I never play engineer.  In fact, I should delete this script since it only helps engineers be more annoying.
 
-Taunt is "t" because I keep accidentally pressing "g" when I mean to press "b" for lastdisguise as spy.  G is bound to spray.
+- `p` toggles "battle engi mode," which is for Gunslinger, and lets you build mini's even faster.
+  - in "battle engi mode" `MOUSE2` will destroy your sentry (if any) and bring up the blueprint to build a new sentry simultaneously.
+- `MOUSE3` is a Sentry Jump script.  You'll probably need to practice using this if you want to use it in a real game.  You can sentry jump using the rockets of a level 3 sentry and the wrangler.
 
-### engineer.cfg
-I never play engineer.  Though I wrote this script I don't remember exactly what it does.  Pressing "p" toggles "battle engi mode" which is essentially for Gunslinger.  I believe it lets you destroy your sentry and bring up the blueprint to build a new sentry with one button (right mouse).  There is also a Sentry Jump script to help you rocket jump with a level 3 sentry.
+---
+## medic.cfg
+I used to play some competitive medic, but now I'm just a casual.
 
-### medic.cfg
-Pressing "q" will initiate a random voice command; you want to do this when you're just about to get full charge, so the medic doesn't announce to everyone (even the enemy) "I am fully charged!"  I have comment out binding "fake" to e, because it conflicts with vaccinator resistance switching with e.  In any case, fake announces "I am fully charged" so the enemy team falsely believes you have uber.  I'm just a casual so these fancy tactics really dont matter shit.  
+- `q` will initiate a random voice command.  You'll want to do this when you're about to get full charge, so you don't announce "I am fully charged!" to everyone (even the enemy).  
+- `fake` alias is written, but not bound.  This will initiate the voice command to say "I am fully charged!" to fool the enemy into thinking you have full charge before you actually do.  I'm just a casual so these fancy tactics really don't matter shit.
+- `r` invokes medic radar.  Holding `r` will lower the autocall for medic threshold to 0 health... so basically all your teammates will display a plus icon over their head so you can see them, even through walls.  Good when you get separated from your team.
 
-Medic radar is bound to "r".  Holding "r" will lower the auto-call for medic threshold to 0 health... so basically all your teammates will have + icons display over their heads so you can see them through walls.  Good when you get separated from your team.
+I was working on a script for vaccinator such that `q`, `e`, and `r` would directly map to a resistance, instead of you needing to cycle with just `e`.  You would then be able to select a resistance without accidentally cycling over it.  I gave up... for now.
 
-I was working on a script for vaccinator such that q, e, and r would directly map to a resistance, instead of you needing to cycle with just e.  You would then be able to select a resistance without accidentally cycling over it.  I gave up.
+---
+## pyro.cfg
+Pretty simple.
 
-### pyro.cfg
-MOUSE3 spins you super fast so you can flame in circles.  Hilarious pre-game, but actually very ineffective at spychecking.  Please don't use it in combat.
+- `MOUSE3` spins you super fast so you can flame in circles.  Hilarious pre-game, but actually very ineffective at spychecking.  Please don't use it in combat.
 
-### spy.cfg
-MOUSE3 quickly disguises you to sniper.  In pubs sniper is best disguise, becaues all pub snipers are retarded. So the enemy doesn't actually expect you to be doing anything.
+---
+## spy.cfg
+I have about 1000 hours on spy.
 
-Scrolling the mouse basically spams "lastdisguise" command and changes weapons.  So, if you scroll the mouse, the enemy will see you change weapons as your disguised class.  You can see verification of the weapon you're holding on the bottom left.
+- `MOUSE3` quickly disguises you to sniper.  In pubs sniper is best disguise, becaues all pub snipers are retarded. So the enemy doesn't actually expect you to be doing anything.
+- `MOUSEWHEELUP` and `MOUSEWHEELDOWN` triggers `lastdisguise` and changes weapons.
+  - So, if you scroll the mouse, the enemy will see you change weapons as your disguised class.  You can see verification of the weapon you're holding on the bottom left.
 
-### all classes.cfg
+---
+## all classes cfg
 The above were class specific scripts.  All classes have the following scripts.
 
-Crosshair style is changed based on class and on slot.  Viewmodels are hidden when you fire for the first time depending on class and slot.  Generally projectile weapons are shown, and hitscan are hidden.  Consider changing these to your own preferences. Consider:
+- Crosshair style is changed based on class and on slot.  
+- Viewmodels are hidden when you fire for the first time depending on class and slot.  Generally projectile weapons are shown, and hitscan are hidden.  Consider changing these to your own preferences.
 
-alias equip1 "slot1; r_drawviewmodel 1; bind MOUSE1 +hide; cl_crosshair_file default"
+Consider:
 
-This displays the default crosshair, and hides the weapon when you shoot with slot1.  You may change +hide to +show, or default to crosshair3.  Or whatever you prefer.
+`alias equip1 "slot1; r_drawviewmodel 1; bind MOUSE1 +hide; cl_crosshair_file default"`
 
-Change Spawn script.  This literally saves my life a few times per game.  It is currently bound to "HOME" (a button on my mouse).  You may change this to anything you want... preferrably a button on your mouse for easy access.  This script will change your class to medic.  If you use this in spawn, you will change class immediately.  So if a crit rocket is flying at you, you can teleport out of the way by changing class.  If you use the script again, you will switch back to your original class.  The switch back is a bit buggy, so you may need to manually switch classes.  If you are medic, it will switch your loadout, but will function the same.  You need to have different equipment sets for this to work.  (perhaps change your hat).
+This displays the default crosshair, and hides the weapon when you shoot with slot1`.  You may change `+hide` to `+show`, or `default` to `crosshair3`.  Or whatever you prefer.
 
-For medic, ideally your first two loadouts use the same medigun, and your last two loadouts use the same medigun.  So you could have quick-fix, quick-fix on A and B.  Then kritz and kritz on C and D.  When you use Change Spawn script, your ubercharge will be preserved.  You may press "o" to switch between which set (A/B or C/D) you are using.
+- Change Spawn script.  This literally saves my life a few times per game.  It is currently bound to `HOME` (a button on my mouse).  This script will change your class to medic.  If you use this in spawn, you will change class immediately.  So if a crit rocket is flying at you, you can teleport out of the way by changing class.  If you use the script again, you will switch back to your original class.  The switch back is a bit buggy, so you may need to manually switch classes.  If you are medic, it will switch your loadout, but will function the same.  You need to have different equipment sets for this to work.  (perhaps change your hat).
+
+- For medic, ideally your first two loadouts use the same medigun, and your last two loadouts use the same medigun.  So you could have quick-fix, quick-fix on A and B.  Then kritz and kritz on C and D.  When you use Change Spawn script, your ubercharge will be preserved.  You may press `o` to switch between which set (A/B or C/D) you are using.
